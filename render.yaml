@@ -11,7 +11,9 @@ services:
       - key: NODE_VERSION
         value: "20"
       - key: SEED_SAMPLE
-        value: "1"
+        value: "0"
+      - key: ADMIN_TOKEN
+        sync: false
       - key: MONGODB_URI
         sync: false
       - key: CORS_ORIGIN
