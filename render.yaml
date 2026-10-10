@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: gh-curriculum-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: SEED_SAMPLE
+        value: "1"
+      - key: MONGODB_URI
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://gh-curriculum-f31c9.web.app,https://gh-curriculum-f31c9.firebaseapp.com,http://localhost:5173
